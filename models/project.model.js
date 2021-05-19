@@ -8,15 +8,14 @@ const projectSchema = new Schema({
     title: String,
     description: String,
 
-    skills: [{ type: String }],
+    requirements: [{ type: String }],
     offeredAmount: { currencyType: String, start: Number, end: Number },
 
     timePeriod: { start: String, end: String },
 
     location: { country: String, state: String, city: String },
 
-
-
+    applicants: [{ type: String }]
 },
     { timestamps: true }
 );
