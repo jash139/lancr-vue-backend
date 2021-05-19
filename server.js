@@ -15,14 +15,16 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once("open", () => {
     console.log("MongoDB database connection established successfully.");
-})
+});
 
-const xyzRouter = require("./routes/xyz");
+const projectRouter = require("./routes/project");
+const userRouter = require("./routes/user");
 
-app.use("/xyz", bookRouter);
+app.use("/projects", projectRouter);
+app.use("/users", userRouter);
 
 app.get("/", function (req, res) {
-    res.send("Home page Errands v2");
+    res.send("Home page Errands2");
 })
 
 app.listen(port, function () {
