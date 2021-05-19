@@ -8,6 +8,8 @@ const projectSchema = new Schema({
     title: String,
     description: String,
 
+    status: String,
+
     requirements: [{ type: String }],
     offeredAmount: { currencyType: String, start: Number, end: Number },
 
