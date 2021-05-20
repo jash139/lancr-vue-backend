@@ -33,3 +33,23 @@ router.route("/")
             .then(() => res.json("Project Added!"))
             .catch(error => res.status(400).json(error));
     });
+
+router.route("/:id")
+    .get(function (req, res) {
+        Project.findById(req.params.id)
+            .then(project => res.json(project))
+            .catch(error => res.status(400).json(error));
+    })
+    .delete(function (req, res) {
+        Project.findByIdAndDelete(req.params.id)
+            .then(() => res.json("Project deleted!"))
+            .catch(error => res.status(400).json("Error: " + error));
+    })
+    .patch(function (req, res) {
+        Project.update(
+            { _id: req.params.id },
+            { $set: req.body }
+        )
+            .then(() => req.json("Project updated!"))
+            .catch(error => res.status(400).json("Error: " + error));
+    });
