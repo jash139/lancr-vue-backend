@@ -47,3 +47,20 @@ router.route("/")
             res.status(400).json("User already exists!");
         }
     });
+
+router.route("/:uid")
+    .get(function (req, res) {
+        User.findOne({ uid: req.params.uid })
+            .then(user => res.json(user))
+            .catch(error => res.status(400).json(error));
+    })
+    .patch(function (req, res) {
+        User.update(
+            { uid: req.params.uid },
+            { $set: req.body }
+        )
+            .then(() => res.json("User data updated."))
+            .catch(error => res.status(400).json("Error: " + error));
+    });
+
+module.exports = router;
