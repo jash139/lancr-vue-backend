@@ -53,3 +53,12 @@ router.route("/:id")
             .then(() => req.json("Project updated!"))
             .catch(error => res.status(400).json("Error: " + error));
     });
+
+router.route("/uid/:uid")
+    .get(function (req, res) {
+        Project.find({ uid: req.params.uid })
+            .then(projects => res.json(projects))
+            .catch(error => res.status(400).json(error));
+    });
+
+module.exports = router;
