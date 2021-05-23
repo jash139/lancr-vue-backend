@@ -15,6 +15,7 @@ router.route("/")
         const about = "About me.";
         const dateOfBirth = "";
         const rating = 0;
+        const totalRatings = 0;
         const experience = [];
         const contact = {
             phone: "",
@@ -38,6 +39,7 @@ router.route("/")
             about,
             dateOfBirth,
             rating,
+            totalRatings,
             experience,
             contact,
             connections,

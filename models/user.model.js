@@ -10,6 +10,7 @@ const userSchema = new Schema({
     about: String,
     dateOfBirth: String,
     rating: Number,
+    totalRatings: Number,
     experience: [
         {
             organization: String,
