@@ -10,17 +10,25 @@ router.route("/")
     .post(async function (req, res) {
         const uid = req.body.uid;
         const name = req.body.name;
-        const title = req.body.title;
-        const profilePicture = req.body.profilePicture;
-        const about = req.body.about;
-        const dateOfBirth = req.body.dateOfBirth;
-        const rating = req.body.rating;
-        const experience = req.body.experience;
-        const contact = req.body.contact;
-        const connections = req.body.connections;
-        const projects = req.body.projects;
-        const skills = req.body.skills;
-        const languages = req.body.languages;
+        const title = "title";
+        const profilePicture = "";
+        const about = "About me.";
+        const dateOfBirth = "";
+        const rating = 0;
+        const experience = [];
+        const contact = {
+            phone: "",
+            location: {
+                city: "",
+                state: "",
+                country: ""
+            },
+            email: "",
+        };
+        const connections = [];
+        const projects = [];
+        const skills = [];
+        const languages = [];
 
         const newUser = new User({
             uid,
