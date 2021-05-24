@@ -1,21 +1,21 @@
 {
-  "name": "errands-v2-vue-backend",
+  "name": "lancr-vue-backend",
   "version": "1.0.0",
-  "description": "Backend for Errands 2",
+  "description": "Backend for Lancr 2",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jash139/errands-v2-vue-backend.git"
+    "url": "git+https://github.com/jash139/lancr-vue-backend.git"
   },
   "author": "Ayush Acharya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jash139/errands-v2-vue-backend/issues"
+    "url": "https://github.com/jash139/lancr-vue-backend/issues"
   },
-  "homepage": "https://github.com/jash139/errands-v2-vue-backend#readme",
+  "homepage": "https://github.com/jash139/lancr-vue-backend#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

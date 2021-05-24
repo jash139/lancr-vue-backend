@@ -24,7 +24,7 @@ app.use("/projects", projectRouter);
 app.use("/users", userRouter);
 
 app.get("/", function (req, res) {
-    res.send("Home page Errands2");
+    res.send("Home page Lancr2");
 })
 
 app.listen(port, function () {
