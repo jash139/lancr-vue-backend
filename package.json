@@ -12,6 +12,9 @@
   },
   "author": "Ayush Acharya",
   "license": "ISC",
+  "engines": {
+    "node": "12.18.2"
+  },
   "bugs": {
     "url": "https://github.com/jash139/lancr-vue-backend/issues"
   },
