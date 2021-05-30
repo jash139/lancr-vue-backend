@@ -50,7 +50,7 @@ router.route("/:id")
             { _id: req.params.id },
             { $set: req.body }
         )
-            .then(() => req.json("Project updated!"))
+            .then(() => res.json("Project updated!"))
             .catch(error => res.status(400).json("Error: " + error));
     });
 
